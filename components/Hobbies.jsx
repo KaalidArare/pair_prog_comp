@@ -1,13 +1,15 @@
 import React from "react";
 import Hobby from "./Hobby.jsx";
 
-const Hobbies = ({ hobbies }) => {
-    console.log(hobbies)
+const Hobbies = (props) => {
+    console.log(props)
      return (
         <>
         <div>
             <ul>
-                {hobbies.map((hobby) => (
+                {/* mapping through the list and rendering one hobby
+                component for each*/}
+                {props.hobbies.map((hobby) => (
                     <Hobby key={hobby.id} hobby={hobby} />
                 ))}
             </ul>
